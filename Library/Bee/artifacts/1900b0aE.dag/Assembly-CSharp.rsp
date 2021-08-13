@@ -343,6 +343,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/Attacker.cs"
 "Assets/Scripts/AttackerSpawner.cs"
+"Assets/Scripts/DefenderButton.cs"
 "Assets/Scripts/DefenderSpawner.cs"
 "Assets/Scripts/Health.cs"
 "Assets/Scripts/LevelLoader.cs"
