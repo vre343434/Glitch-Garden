@@ -18,20 +18,43 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    private IEnumerator WaitForTime()
+    IEnumerator WaitForTime()
     {
         yield return new WaitForSeconds(timeToWait);
         LoadNextScene();
     }
 
-    private void LoadNextScene()
+    public void RestartScene()
     {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
+    }
+
+    public void LoadNextScene()
+    {
+        Time.timeScale = 1;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadOptionsScreen()
     {
-        
+        SceneManager.LoadScene("Options Screen");
+    }
+
+    // Update is called once per frame
+    public void LoadYouLose()
+    {
+        SceneManager.LoadScene("Lose Screen");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
